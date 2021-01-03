@@ -17,7 +17,7 @@ module.exports = {
         appBackground: "#FCFCFC",
         pinkBackground: "#FFF9FC",
         "dark-purple": "#362C59",
-        "teal-1": "#7BE2D2",
+        "teal-1": "#eb5e5e",
         "gray-1": "#A0A4A8",
         "light-green-2": "#40DD7F",
         "light-purple": "#faf3f8",

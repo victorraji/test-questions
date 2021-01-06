@@ -1,12 +1,14 @@
 <template>
   <div class="lg:text-sm">
     <div
-      class="bg-red-1 text-white items-center px-2 text-xs flex justify-between border-b border-white"
+      class="bg-red-1 h-10 text-white items-center px-2 text-xs flex justify-between border-b border-white"
     >
       <div class="font-sans">
         Medical College Admission Test
-        <span>{{ dateMonth }} {{ dateDay }}</span>
+        <!-- <span>{{ dateMonth }} {{ dateDay }}</span> -->
       </div>
+           <!-- <img alt="Vue logo" src="./assets/logo.jpeg" /> -->
+           <i class="fab fa-stumbleupon fa-3x"></i>
       <div class="flex flex-col">
         <div class="flex items-center">
           <div><i class="far fa-clock"></i></div>
@@ -18,12 +20,12 @@
           <i class="fas fa-toggle-off"></i>
         </div>
         <div class="flex items-center justify-end">
-          <i class="fas fa-print"></i> <span class="pl-2"> 1 of 7 </span>
+          <!-- <span class="pl-2"> 1 of 7 </span> -->
         </div>
       </div>
     </div>
     <div
-      class="bg-teal-1 border-b text-xs text-white border-white flex items-center px-2 justify-between"
+      class="bg-red-2 border-b text-xs text-white border-white flex items-center px-2 justify-between"
     >
       <div class="flex">
         <div class="cursor-pointer">
@@ -40,11 +42,9 @@
         <div class="pl-3"><span class="underline">F</span>lag for Review</div>
       </div>
     </div>
-    <div  class="bg-gray-1 lg:block hidden">
-      <div class="grid grid grid-cols-2">
-        <div></div>
-        <div class="pl-32">
-          <button class="bg-white border px-3 my-1">Solution</button>
+    <div class="bg-teal-1 h-5 lg:block hidden">
+      <div class="grid grid-cols-2">
+        <div>
         </div>
       </div>
     </div>
@@ -59,7 +59,10 @@
       </div>
     </div>
     <div class="bg-red-1 flex items-center h-12 justify-end text-white pr-8">
-      <div @click="previous" class="flex items-center px-4 border-l">
+      <div @click="previous" class="flex items-center px-4 border-l cursor-pointer  hover:text-teal-1">
+        <i class="fas fa-arrow-left"></i> <div class="pl-2"><span class="underline">P</span>revious</div>
+      </div>
+      <div class="flex items-center px-4 border-l">
         <i class="fas fa-star"></i> Na <span class="underline">v</span>igation
       </div>
       <div
@@ -121,7 +124,17 @@ export default {
         this.activeQuestion = "five";
       }
     },
-    previous() {},
+    previous() {
+      if (this.activeQuestion === "three") {
+        this.activeQuestion = "two";
+      } else if (this.activeQuestion === "four") {
+        this.activeQuestion = "three";
+      } else if (this.activeQuestion === "five") {
+        this.activeQuestion = "four";
+      } else if (this.activeQuestion === "two") {
+        this.activeQuestion = "one";
+      }
+    },
     end() {
       alert("The QUIZ HAS ENDED");
     },

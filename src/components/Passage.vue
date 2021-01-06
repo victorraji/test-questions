@@ -14,7 +14,7 @@
     </div>
     <div class="px-4">
       <div class="font-bold text-lg pb-2">Passage 1 (Questions 1-7)</div>
-      <div class="font-semibold">
+      <div class="">
         <div class="pb-2">
           Granulocyte colony stimulating factor receptor (G- CSFR) is a
           transmembrane cytokine receptor involved in the production of
@@ -35,7 +35,7 @@
           <img alt="Vue logo" src="../assets/exampic.png" />
         </div>
         <div class="pb-2">
-          <span class="font-bold text-sm">Figure 1.</span> Target
+          <span class="text-sm">Figure 1.</span> Target
           phosphorylation of proteins of interest under different conditions.
         </div>
 

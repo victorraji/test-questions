@@ -24,8 +24,8 @@
           v-model="picked"
         />
         <label :for="solution.id"
-          ><span class="font-bold pr-2">{{ solution.value }}.</span>
-          <span class="font-semibold">{{ solution.option }}</span></label
+          ><span class="pr-2">{{ solution.value }}.</span>
+          <span class="">{{ solution.option }}</span></label
         >
       </div>
       <br />
